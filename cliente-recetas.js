@@ -1,9 +1,11 @@
 //npm install fastify
+
 const fs = require("fs");
+
 const server = require("fastify")({
     https: {
-        key: fs.readFileSync(__dirname + "/tls/llave.privada.key"),
-        cert: fs.readFileSync(__dirname + "shared/tls/certificado-publico.cert")
+        key: fs.readFileSync(__dirname + "/tls/llave-privada.key"),
+        cert: fs.readFileSync(__dirname + "/shared/tls/certificado-publico.cert")
     }
 });
 
